@@ -1,9 +1,9 @@
-.App {
+.header {
   text-align: center;
+  margin: 2em;
 }
 
-.App-header {
-  background-color: #282c34;
+.container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
