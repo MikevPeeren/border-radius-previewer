@@ -1,0 +1,51 @@
+.BorderRadiusDisplay {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2em;
+
+  &__label {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    line-height: 1.5;
+    margin: 0.1em;
+  }
+
+  &__output {
+    display: flex;
+    line-height: 1.5;
+
+    &--input {
+      width: 20em;
+      height: 1.5em;
+      border: none;
+      border-top-left-radius: 0.5em;
+      border-bottom-left-radius: 0.5em;
+      text-align: center;
+
+      padding: 0.5em 0.5em;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      color: #002;
+      background: #ccc;
+    }
+
+    &--submit {
+      width: 10em;
+      font-size: 1.25rem;
+      border: none;
+      border-top-right-radius: 0.5em;
+      border-bottom-right-radius: 0.5em;
+
+      line-height: 1.5;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      color: #002;
+      background-color: #bada55;
+    }
+  }
+}
