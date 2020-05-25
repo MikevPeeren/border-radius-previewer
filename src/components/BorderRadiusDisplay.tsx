@@ -4,10 +4,15 @@ import React from 'react';
 // CSS
 import './BorderRadiusDisplay.scss';
 
+// Constants
+import { BORDER_RADIUS_LABEL, COPY } from '../constants/general';
+
 const BorderRadiusDisplay = () => {
   return (
     <div className="BorderRadiusDisplay">
-      <label className="BorderRadiusDisplay__label">Border Radius:</label>
+      <label className="BorderRadiusDisplay__label">
+        {BORDER_RADIUS_LABEL}
+      </label>
       <div className="BorderRadiusDisplay__output">
         <input
           className="BorderRadiusDisplay__output--input"
@@ -18,7 +23,7 @@ const BorderRadiusDisplay = () => {
           disabled
         ></input>
         <button className="BorderRadiusDisplay__output--submit" type="submit">
-          COPY
+          {COPY}
         </button>
       </div>
     </div>

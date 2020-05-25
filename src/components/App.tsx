@@ -5,13 +5,14 @@ import React from 'react';
 import './App.scss';
 
 // Components
+import Header from './Header';
 import Generator from './Generator';
 import BorderRadiusDisplay from './BorderRadiusDisplay';
 
 const App = () => {
   return (
     <div className="container">
-      <header className="header">Border Radius Previewer</header>
+      <Header></Header>
       <Generator></Generator>
       <BorderRadiusDisplay></BorderRadiusDisplay>
     </div>
