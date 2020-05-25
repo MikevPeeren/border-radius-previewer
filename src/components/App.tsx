@@ -2,7 +2,7 @@
 import React from 'react';
 
 // CSS
-import './App.css';
+import './App.scss';
 
 // Components
 import Generator from './Generator';

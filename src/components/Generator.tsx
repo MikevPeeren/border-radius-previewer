@@ -2,7 +2,7 @@
 import React from 'react';
 
 // CSS
-import './Generator.css';
+import './Generator.scss';
 
 const Generator = () => {
   return (
