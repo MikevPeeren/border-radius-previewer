@@ -81,11 +81,6 @@ const Generator = () => {
           onChange={handleBottomSliderChange}
         />
       )}
-
-      {/* <span className="borderRadiusPreviewer__handle" id="top"></span>
-      <span className="borderRadiusPreviewer__handle" id="left"></span>
-      <span className="borderRadiusPreviewer__handle" id="right"></span>
-      <span className="borderRadiusPreviewer__handle" id="bottom"></span> */}
     </div>
   );
 };
