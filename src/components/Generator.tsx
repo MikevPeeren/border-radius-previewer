@@ -4,34 +4,31 @@ import React, { useState } from 'react';
 // CSS
 import './Generator.scss';
 
+import { TOP, LEFT, RIGHT, BOTTOM } from '../constants/general';
+
 const Generator = () => {
   const [topSliderValue, setTopSliderValue] = useState(50);
   const [leftSliderValue, setLeftSliderValue] = useState(50);
   const [rightSliderValue, setRightSliderValue] = useState(50);
   const [bottomSliderValue, setBottomSliderValue] = useState(50);
 
-  const handleTopSliderChange = (event: any) => {
-    console.log(event.target.value);
-    //@ts-ignore
-    setTopSliderValue(event.target.value);
-  };
-
-  const handleLeftSliderChange = (event: any) => {
-    console.log(event.target.value);
-    //@ts-ignore
-    setLeftSliderValue(event.target.value);
-  };
-
-  const handleRightSliderChange = (event: any) => {
-    console.log(event.target.value);
-    //@ts-ignore
-    setRightSliderValue(event.target.value);
-  };
-
-  const handleBottomSliderChange = (event: any) => {
-    console.log(event.target.value);
-    //@ts-ignore
-    setBottomSliderValue(event.target.value);
+  const handleSliderChange = (event: any, location: string) => {
+    switch (location) {
+      case TOP:
+        setTopSliderValue(event.target.value);
+        break;
+      case LEFT:
+        setLeftSliderValue(event.target.value);
+        break;
+      case RIGHT:
+        setRightSliderValue(event.target.value);
+        break;
+      case BOTTOM:
+        setBottomSliderValue(event.target.value);
+        break;
+      default:
+        return;
+    }
   };
 
   return (
@@ -40,45 +37,53 @@ const Generator = () => {
       {topSliderValue && (
         <input
           className="borderRadiusPreviewer__handle"
-          id="top"
+          id={TOP}
           type="range"
           min="0"
           max="100"
           value={topSliderValue}
-          onChange={handleTopSliderChange}
+          onChange={(event) => {
+            handleSliderChange(event, TOP);
+          }}
         />
       )}
       {leftSliderValue && (
         <input
           className="borderRadiusPreviewer__handle"
-          id="left"
+          id={LEFT}
           type="range"
           min="0"
           max="100"
           value={leftSliderValue}
-          onChange={handleLeftSliderChange}
+          onChange={(event) => {
+            handleSliderChange(event, LEFT);
+          }}
         />
       )}
       {rightSliderValue && (
         <input
           className="borderRadiusPreviewer__handle"
-          id="right"
+          id={RIGHT}
           type="range"
           min="0"
           max="100"
           value={rightSliderValue}
-          onChange={handleRightSliderChange}
+          onChange={(event) => {
+            handleSliderChange(event, RIGHT);
+          }}
         />
       )}
       {bottomSliderValue && (
         <input
           className="borderRadiusPreviewer__handle"
-          id="bottom"
+          id={BOTTOM}
           type="range"
           min="0"
           max="100"
           value={bottomSliderValue}
-          onChange={handleBottomSliderChange}
+          onChange={(event) => {
+            handleSliderChange(event, BOTTOM);
+          }}
         />
       )}
     </div>
