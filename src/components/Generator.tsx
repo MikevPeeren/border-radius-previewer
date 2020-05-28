@@ -39,16 +39,16 @@ const Generator = () => {
 
     if (shapeElement) {
       const topLeftRadius = shapeElement.style.borderTopLeftRadius;
-      const topRightRadius = shapeElement.style.borderTopLeftRadius;
+      const topRightRadius = shapeElement.style.borderTopRightRadius;
 
       const secondPercentageTopLeftRadius =
         topLeftRadius.charAt(topLeftRadius.length - 4) === '%'
           ? topLeftRadius.substring(topLeftRadius.length - 5)
           : topLeftRadius.substring(topLeftRadius.length - 4);
       const secondPercentageTopRightRadius =
-        topRightRadius.charAt(topLeftRadius.length - 4) === '%'
-          ? topRightRadius.substring(topLeftRadius.length - 5)
-          : topRightRadius.substring(topLeftRadius.length - 4);
+        topRightRadius.charAt(topRightRadius.length - 4) === '%'
+          ? topRightRadius.substring(topRightRadius.length - 5)
+          : topRightRadius.substring(topRightRadius.length - 4);
 
       shapeElement.style.borderTopLeftRadius = `${topSliderValue}% ${secondPercentageTopLeftRadius}`;
       shapeElement.style.borderTopRightRadius = `${
@@ -71,7 +71,7 @@ const Generator = () => {
           : bottomLeftRadius.substring(bottomLeftRadius.length - 4);
       const secondPercentageBottomRightRadius =
         bottomRightRadius.charAt(bottomRightRadius.length - 4) === '%'
-          ? bottomRightRadius.substring(bottomRightRadius.length - 5)
+          ? bottomRightRadius.substring(bottomRightRadius.length - 2)
           : bottomRightRadius.substring(bottomRightRadius.length - 4);
 
       shapeElement.style.borderBottomLeftRadius = `${bottomSliderValue}% ${secondPercentageBottomLeftRadius}`;
@@ -123,8 +123,6 @@ const Generator = () => {
         bottomRightRadius.charAt(0) === '0'
           ? bottomRightRadius.substring(0, 3)
           : bottomRightRadius.substring(0, 4);
-
-      console.log(firstPercentageTopRightRadius);
 
       shapeElement.style.borderTopRightRadius = `${firstPercentageTopRightRadius} ${
         100 - rightSliderValue
