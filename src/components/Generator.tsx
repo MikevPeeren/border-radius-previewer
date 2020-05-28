@@ -4,14 +4,22 @@ import React, { useState, useEffect } from 'react';
 // CSS
 import './Generator.scss';
 
+// Constants
 import { TOP, LEFT, RIGHT, BOTTOM } from '../constants/general';
 
-const Generator = () => {
-  const [topSliderValue, setTopSliderValue] = useState(50);
-  const [leftSliderValue, setLeftSliderValue] = useState(50);
-  const [rightSliderValue, setRightSliderValue] = useState(50);
-  const [bottomSliderValue, setBottomSliderValue] = useState(50);
+interface GeneratorProps {
+  handleBorderRadiusChange: Function;
+}
 
+const Generator: React.FC<GeneratorProps> = ({ handleBorderRadiusChange }) => {
+  const [topSliderValue, setTopSliderValue] = useState(70);
+  const [leftSliderValue, setLeftSliderValue] = useState(50);
+  const [rightSliderValue, setRightSliderValue] = useState(60);
+  const [bottomSliderValue, setBottomSliderValue] = useState(20);
+
+  /**
+   * Switch Case to handle the different sliders.
+   */
   const handleSliderChange = (event: any, location: string) => {
     switch (location) {
       case TOP:
@@ -30,6 +38,17 @@ const Generator = () => {
         return;
     }
   };
+
+  // Our Border Radius Shape
+  const shape = document.getElementById('shape');
+  const borderRadius = shape?.style.borderRadius;
+
+  /**
+   * Updating the Border Radius string, so users can Copy it.
+   */
+  useEffect(() => {
+    handleBorderRadiusChange(borderRadius);
+  }, [handleBorderRadiusChange, borderRadius]);
 
   // TODO: Cleanup the mess below
 
