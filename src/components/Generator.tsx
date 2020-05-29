@@ -4,6 +4,9 @@ import React, { useState, useEffect } from 'react';
 // CSS
 import './Generator.scss';
 
+// Components
+import Slider from './Slider';
+
 // Constants
 import { TOP, LEFT, RIGHT, BOTTOM } from '../constants/general';
 
@@ -155,55 +158,31 @@ const Generator: React.FC<GeneratorProps> = ({ handleBorderRadiusChange }) => {
     <div className="borderRadiusPreviewer">
       <div id="shape" className="borderRadiusPreviewer__shape"></div>
       {topSliderValue && (
-        <input
-          className="borderRadiusPreviewer__handle"
+        <Slider
           id={TOP}
-          type="range"
-          min="0"
-          max="100"
           value={topSliderValue}
-          onChange={(event) => {
-            handleSliderChange(event, TOP);
-          }}
+          handleSliderChange={handleSliderChange}
         />
       )}
       {leftSliderValue && (
-        <input
-          className="borderRadiusPreviewer__handle"
+        <Slider
           id={LEFT}
-          type="range"
-          min="0"
-          max="100"
           value={leftSliderValue}
-          onChange={(event) => {
-            handleSliderChange(event, LEFT);
-          }}
+          handleSliderChange={handleSliderChange}
         />
       )}
       {rightSliderValue && (
-        <input
-          className="borderRadiusPreviewer__handle"
+        <Slider
           id={RIGHT}
-          type="range"
-          min="0"
-          max="100"
           value={rightSliderValue}
-          onChange={(event) => {
-            handleSliderChange(event, RIGHT);
-          }}
+          handleSliderChange={handleSliderChange}
         />
       )}
       {bottomSliderValue && (
-        <input
-          className="borderRadiusPreviewer__handle"
+        <Slider
           id={BOTTOM}
-          type="range"
-          min="0"
-          max="100"
           value={bottomSliderValue}
-          onChange={(event) => {
-            handleSliderChange(event, BOTTOM);
-          }}
+          handleSliderChange={handleSliderChange}
         />
       )}
     </div>
