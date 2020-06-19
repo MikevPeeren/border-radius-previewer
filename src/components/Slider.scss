@@ -9,6 +9,7 @@
   background: inherit;
   -webkit-transition: 0.2s;
   -webkit-appearance: none;
+  background: none;
 }
 
 #top {
@@ -18,15 +19,15 @@
 
 #left {
   margin: 0;
-  left: -15.75rem;
-  top: 46%;
+  right: 50%;
+  top: 43%;
   transform: rotate(270deg);
 }
 
 #right {
   margin: 0;
-  right: -15.75rem;
-  top: 46%;
+  left: 50%;
+  top: 43%;
   transform: rotate(270deg);
 }
 

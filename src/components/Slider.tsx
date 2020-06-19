@@ -10,7 +10,6 @@ interface SliderProps {
   handleSliderChange: Function;
 }
 const Slider: React.FC<SliderProps> = ({ id, value, handleSliderChange }) => {
-  console.log('slider');
   return (
     <input
       className="slider"

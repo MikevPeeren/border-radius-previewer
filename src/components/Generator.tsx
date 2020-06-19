@@ -156,35 +156,36 @@ const Generator: React.FC<GeneratorProps> = ({ handleBorderRadiusChange }) => {
 
   return (
     <div className="borderRadiusPreviewer">
-      <div id="shape" className="borderRadiusPreviewer__shape"></div>
-      {topSliderValue && (
-        <Slider
-          id={TOP}
-          value={topSliderValue}
-          handleSliderChange={handleSliderChange}
-        />
-      )}
-      {leftSliderValue && (
-        <Slider
-          id={LEFT}
-          value={leftSliderValue}
-          handleSliderChange={handleSliderChange}
-        />
-      )}
-      {rightSliderValue && (
-        <Slider
-          id={RIGHT}
-          value={rightSliderValue}
-          handleSliderChange={handleSliderChange}
-        />
-      )}
-      {bottomSliderValue && (
-        <Slider
-          id={BOTTOM}
-          value={bottomSliderValue}
-          handleSliderChange={handleSliderChange}
-        />
-      )}
+      <div id="shape" className="borderRadiusPreviewer__shape">
+        {topSliderValue && (
+          <Slider
+            id={TOP}
+            value={topSliderValue}
+            handleSliderChange={handleSliderChange}
+          />
+        )}
+        {leftSliderValue && (
+          <Slider
+            id={LEFT}
+            value={leftSliderValue}
+            handleSliderChange={handleSliderChange}
+          />
+        )}
+        {rightSliderValue && (
+          <Slider
+            id={RIGHT}
+            value={rightSliderValue}
+            handleSliderChange={handleSliderChange}
+          />
+        )}
+        {bottomSliderValue && (
+          <Slider
+            id={BOTTOM}
+            value={bottomSliderValue}
+            handleSliderChange={handleSliderChange}
+          />
+        )}
+      </div>
     </div>
   );
 };

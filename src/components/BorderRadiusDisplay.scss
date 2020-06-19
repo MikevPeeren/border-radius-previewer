@@ -16,10 +16,12 @@
 
   &__output {
     display: flex;
+
+    margin: 0 auto;
     line-height: 1.5;
 
     &--input {
-      width: 20em;
+      width: 50vmin;
       height: 1.5em;
       border: none;
       border-top-left-radius: 0.5em;
@@ -34,7 +36,7 @@
     }
 
     &--submit {
-      width: 10em;
+      width: 30vmin;
       font-size: 1.25rem;
       border: none;
       border-top-right-radius: 0.5em;
