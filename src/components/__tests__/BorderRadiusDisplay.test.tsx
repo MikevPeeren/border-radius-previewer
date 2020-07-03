@@ -3,13 +3,13 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 // Components
-import BorderRadiusDisplay from './BorderRadiusDisplay';
+import BorderRadiusDisplay from '../BorderRadiusDisplay';
 
 // Constants
 import {
   BORDER_RADIUS_LABEL,
   DEFAULT_BORDER_RADIUS,
-} from '../constants/general';
+} from '../../constants/general';
 
 test('Renders the Border Radius Label', () => {
   const { getByText } = render(
